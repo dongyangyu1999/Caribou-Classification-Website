@@ -1,0 +1,309 @@
+.tbody{
+	background-color:rgba(255,255,255,0.8);
+	width: 800px;
+	height: 1150px;
+	margin: auto;
+	padding: 0;
+	padding-bottom: 0;
+	position: relative;
+	top: 150px;
+}
+
+.tbody-bkg{
+    background-color:
+    rgba(255,255,255,0.5);
+    width: 800px;
+    margin: auto;
+    padding: 0em;
+    padding-bottom: 2.5em;
+    padding-bottom: 0;
+    position: relative;
+    top: 0px;
+    height: auto;
+}
+
+.right1{
+    position: absolute;
+    right: 10px;
+    top: 45px;
+}
+
+.right2{
+    position: absolute;
+    right: 10px;
+    top: 20%;
+
+}
+.right3{
+    position: absolute;
+    right: 10px;
+    top: 40%;
+}
+.right4{
+    position: absolute;
+    right: 10px;
+    top: 55%;
+}
+.right5{
+    position: absolute;
+    right: 10px;
+    top: 75%;
+    width: 365px;
+}
+#right5_button{
+    width: 100px;
+    height: 40px;
+}
+
+.left1{
+    position: absolute;
+    left: 20px;
+    top: 45px;
+}
+
+.left2{
+    position: absolute;
+    left: 20px;
+    top: 20%;
+}
+
+.left3{
+    position: absolute;
+    left: 20px;
+    top: 40%;
+
+}
+.left4{
+    position: absolute;
+    left: 20px;
+    top: 55%;
+}
+.left5{
+    position: absolute;
+    left: 20px;
+    top: 75%;
+}
+
+.fontBtn{
+  font-size: 20px;
+  width: 365px;
+}
+
+.buttonLeft{
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  font-size: 20px;
+  position: relative;
+  top: 100%;
+}
+
+.buttonRight{
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  font-size: 20px;
+  position: relative;
+  top: 100%;
+}
+
+#content{
+    position: absolute;
+    top: -80px;
+    left: 35%;
+}
+
+#classification-content{
+    text-align: center;
+}
+
+.options{
+    margin: 0;
+    font-size: 1.10em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.option_heading{
+    width: 365px;
+    background: #DCE2BE;
+
+    height: 57.6px;
+}
+
+#bottom_button{
+    bottom: -5px;
+    width: 800px;
+    position: absolute;
+}
+
+.alert{
+padding: .4rem 1.1rem;
+}
+
+.msg-box {
+    width: 80%;
+    text-align: center;
+    padding: 1.0px;
+    margin: 0 auto;
+}
+
+.buttonClickAll{
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    width: 200px;
+    font-size: 20px;
+    padding: 0 0;
+    margin: 5px 0;
+}
+
+.buttonClickAll:hover {
+    background-color: #555555;
+    color: white;
+    width: 200px;
+    font-size: 20px;
+}
+
+.formLabel{
+    width: auto;
+}
+
+.formField{
+    width: 600px;
+    position: relative;
+}
+
+.multiField{
+    border: 5px solid blue;
+}
+
+.Potential_insect_avoidance_behavior{
+}
+
+.live {
+  overflow: hidden;
+}
+.live > li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 2em;
+  margin: 0 0 .5em 10px;
+  -webkit-transition: .12s;
+          transition: .12s;
+}
+.live > li::before {
+  position: absolute;
+  content: '\2022';
+  font-family: Arial;
+  color: #FFF;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 2em;
+  opacity: .5;
+  line-height: .75;
+  -webkit-transition: .5s;
+          transition: .5s;
+}
+.live > li:hover {
+  color: #FFF;
+}
+.live > li:hover::before {
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  opacity: 1;
+  text-shadow: 0 0 4px;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+
+
+.live ol, .live ul {
+  display: inline-block;
+  width: 600px;
+  text-align: left;
+  vertical-align: top;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1.5em 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.errorTips{
+    content: attr(data-title);
+             /*利用attr来读取data-title的值*/
+     left: -120px;
+     top:30px;
+     border: 1px solid #ccc;
+     background: #f1f7f7;
+     border-radius: 5px;
+     padding: 10px 15px;
+}
+
+.errorLink{
+    position: absolute;
+    right: -86px;
+    top: 10px;
+}
+
+/* 悬浮提示框 */
+/* Tooltip 容器 */
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black; /* 悬停元素上显示点线 */
+	cursor: pointer;
+}
+
+/* Tooltip 文本 */
+.Xtooltip .Xtooltiptext {
+	visibility: hidden;
+	min-width: 120px;
+	width: 400px;
+	height: auto;
+	max-width: 350px;
+	margin-top: 20px;
+	background-color: rgb(20, 19, 19);
+	color: rgb(239, 243, 240);
+	white-space: pre-wrap;
+	/* word-break: break-all; */
+	text-align: left;
+	padding: 5px 8px 5px 6px;
+	border-radius: 6px;
+
+	/* 定位 */
+	position: absolute;
+	z-index: 9999;
+	top: 70%;
+  left: 10%;
+  margin-left: -230px;
+}
+
+.Xtooltip .Xtooltiptext::after {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	margin-left: -10px;
+	/*  属性指定了箭头的大小。如果你修改它，也要修改 margin-left 值。这样箭头在能居中显示 */
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent rgb(20, 19, 19) transparent;
+}
+
+/* 鼠标移动上去后显示提示框 */
+.Xtooltip:hover .Xtooltiptext {
+	visibility: visible;
+}

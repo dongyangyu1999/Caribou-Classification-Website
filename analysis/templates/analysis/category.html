@@ -1,0 +1,179 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+
+{% block head %}
+	<title>Category</title>
+	<link rel="stylesheet" href="{% static 'bases/normalize.css' %}">
+  	<link rel="stylesheet" href="{% static 'bases/layout.css' %}">
+  	<link rel="stylesheet" type="text/css" href="{% static 'analysis/hb.css' %}">
+	<script >
+		function All()
+			{
+			   clearRadioGroup("Options1");
+			   clearRadioGroup("Options2");
+			}
+
+		function clickAll(GroupName)
+			{
+			  var ele = document.getElementsByName(GroupName);
+				for(var i=0;i<ele.length;i++)
+				ele[i].checked = true;
+			}
+	</script>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="tbody">
+
+	<div id="content">
+	  <h1>Category</h1>
+	</div>
+	{% if messages %}
+		{% for message in messages %}
+		<div class="msg-box">
+		  <div class="alert alert-{{ message.tags }}">
+			{{ message }}
+		  </div>
+		</div>
+		{% endfor %}
+    {% endif %}
+
+	<form method="POST" action="" >
+<!--	<form method="POST" action="{% url 'analysis-targetVideo' %}">-->
+<!--	<form method="POST" >-->
+		{% csrf_token %}
+  	  	<div class="left1">
+			<div class="option_heading">
+				<h4>Quality</h4>
+			</div>
+			<div class="box">
+				<h3 class="options"><input type="checkbox" name="Quality" value="Excellent"/>Excellent</h3>
+				<h3 class="options"><input type="checkbox" name="Quality" value="Good_to_Fair"/>Good to Fair</h3>
+				<h3 class="options"><input type="checkbox" name="Quality" value="Poor"/>Poor</h3>
+				<h3 class="options"><input type="checkbox" name="Quality" value="Extremely_Obstructed"/>Extremely Obsetructed</h3>
+				<button type="button" class="buttonClickAll" onclick="clickAll('Quality')">No preference</button>
+			</div>
+	</div>
+
+		<div class="right1">
+			<div class="option_heading">
+				<h4>Ruminating/Foraging</h4>
+			</div>
+			<h3 class="options"><input type="checkbox" name="Ruminating/Foraging" value="Ruminating"/>Ruminating</h3>
+			<h3 class="options"><input type="checkbox" name="Ruminating/Foraging" value="Chewing"/>Chewing</h3>
+			<h3 class="options"><input type="checkbox" name="Ruminating/Foraging" value="Drinking"/>Drinking</h3>
+			<h3 class="options"><input type="checkbox" name="Ruminating/Foraging" value="Licking"/>Licking Soil for Minerals but did not eat</h3>
+			<button type="button" class="buttonClickAll" onclick="clickAll('Ruminating/Foraging')">No preference</button>
+	</div>
+
+		<div class="left2">
+			<div class="option_heading">
+				<h4>State of Locomotion</h4>
+			</div>
+			<h3 class="options"><input type="checkbox" name="State of Locomotion" value="Wading"/>Wading/Swimming</h3>
+			<h3 class="options"><input type="checkbox" name="State of Locomotion" value="Running"/>Running</h3>
+			<h3 class="options"><input type="checkbox" name="State of Locomotion" value="Walking"/>Walking</h3>
+			<h3 class="options"><input type="checkbox" name="State of Locomotion" value="Stationary"/>Stationary Awake</h3>
+			<h3 class="options"><input type="checkbox" name="State of Locomotion" value="Napping">Napping</h3>
+			<button type="button" class="buttonClickAll" onclick="clickAll('State of Locomotion')">No preference</button>
+
+	</div>
+
+		<div class="right2">
+			<div class="option_heading">
+				<h4>Is a calf visible?</h4>
+			</div>
+			<h3 class="options"><input type="checkbox" name="Is_a_calf_visible" value="own"/>Yes – her own</h3>
+			<h3 class="options"><input type="checkbox" name="Is_a_calf_visible" value="possibly"/>Yes – possibly her own</h3>
+			<h3 class="options"><input type="checkbox" name="Is_a_calf_visible" value="other"/>Yes – calf is with another cow</h3>
+			<h3 class="options"><input type="checkbox" name="Is_a_calf_visible" value="no"/>No</h3>
+			<button type="button" class="buttonClickAll" onclick="clickAll('Is_a_calf_visible')">No preference</button>
+		</div>
+
+<!--		<div class="right2">-->
+<!--			<div class="option_heading">-->
+<!--				<h4>About Caribou</h4>-->
+<!--			</div>-->
+<!--			<h3 class="options"><input type="checkbox" name="About Caribou" value="visible"/>Is a calf visible?</h3>-->
+<!--			<h3 class="options"><input type="checkbox" name="About Caribou" value="Other"/>Other caribou visible (excluding own calf)? </h3>-->
+<!--			<h3 class="options"><input type="checkbox" name="About Caribou" value="antlers"/>Does the cow have antlers? </h3>-->
+<!--			<button type="button" class="buttonClickAll" onclick="clickAll('About Caribou')">No preference</button>-->
+<!--		</div>-->
+
+		<div class="left3">
+			<div class="option_heading">
+				<h4>Other caribou visible (excluding own calf)?</h4>
+			</div>
+
+			<h3 class="options"><input type="checkbox" name="Other_caribou_visible" value="herd"/>Yes – herd</h3>
+			<h3 class="options"><input type="checkbox" name="Other_caribou_visible" value="individual"/>Yes – one to a few individuals </h3>
+			<h3 class="options"><input type="checkbox" name="Other_caribou_visible" value="no"/>No </h3>
+			<button type="button" class="buttonClickAll" onclick="clickAll('Other_caribou_visible')">No preference</button>
+	 	</div>
+
+		<div class="right3">
+			<div class="option_heading">
+				<h4>Does the cow have antlers?</h4>
+			</div>
+			<h3 class="options"><input type="checkbox" name="cow_have_antlers" value="yes"/>Yes</h3>
+			<h3 class="options"><input type="checkbox" name="cow_have_antlers" value="no"/>No </h3>
+			<h3 class="options"><input type="checkbox" name="cow_have_antlers" value="not"/>Can’t seet suret relevant</h3>
+			<button type="button" class="buttonClickAll" onclick="clickAll('cow_have_antlers')">No preference</button>
+		</div>
+
+
+		<div class="left4">
+			<div class="option_heading">
+				<h4>What part of the habitat is visible?</h4>
+			</div>
+			<h3 class="options"><input type="checkbox" name="Habitat" value="surrounding"/>Ground and immediate surroundings</h3>
+			<h3 class="options"><input type="checkbox" name="Habitat" value="ground"/>Only ground</h3>
+			<h3 class="options"><input type="checkbox" name="Habitat" value="None"/>None</h3>
+			<button type="button" class="buttonClickAll" onclick="clickAll('Habitat')">No preference</button>
+		</div>
+
+<!--		整理-->
+		<div class="right4">
+			<div class="option_heading">
+				<h4>Potential insect avoidance behavior</h4>
+			</div>
+			<h3 class="options"><input type="checkbox" name="Potential_insect_avoidance_behavior" value="Shook"/>Shook its head</h3>
+			<h3 class="options"><input type="checkbox" name="Potential_insect_avoidance_behavior" value="nose"/>Kept its nose still AND on the ground</h3>
+			<h3 class="options"><input type="checkbox" name="Potential_insect_avoidance_behavior" value="Scratched"/>Scratched</h3>
+			<h3 class="options"><input type="checkbox" name="Potential_insect_avoidance_behavior" value="Sought"/>Sought snow patch</h3>
+			<h3 class="options"><input type="checkbox" name="Potential_insect_avoidance_behavior" value="Huddled"/>Huddled</h3>
+			<button type="button" class="buttonClickAll" onclick="clickAll('Potential_insect_avoidance_behavior')">No preference</button>
+		</div>
+
+		<div class="left5">
+			<div class="option_heading">
+				<h4>Predominant vegetation</h4>
+			</div>
+			<h3 class="options"><input type="checkbox" name="Predominant vegetation" value="PoorVisibility"/>Poor visibility of predominant vegetation</h3>
+			<h3 class="options"><input type="checkbox" name="Predominant vegetation" value="Alpine"/>Alpine Tundra</h3>
+			<h3 class="options"><input type="checkbox" name="Predominant vegetation" value="Lichen"/>Lichen/Moss/Herbaceous</h3>
+			<h3 class="options"><input type="checkbox" name="Predominant vegetation" value="Shrubby"/>Shrubby</h3>
+			<h3 class="options"><input type="checkbox" name="Predominant vegetation" value="Deciduous"/>Forested – Deciduous</h3>
+			<h3 class="options"><input type="checkbox" name="Predominant vegetation" value="Coniferous"/>Forested – Coniferous</h3>
+			<h3 class="options"><input type="checkbox" name="Predominant vegetation" value="Unvegetated"/>Unvegetated Areas</h3>
+			<button type="button" class="buttonClickAll" onclick="clickAll('Predominant vegetation')">No preference</button>
+		</div>
+
+		<div class="right5">
+			<h4 class="option_heading">If you have no preference for any categories, please click on the button below.</h4>
+			<button id="right5_button" type="button"
+					onclick= "window.location.href='{% url 'analysis-targetVideo' %}'">All</button>
+		</div>
+
+		<div id="bottom_button">
+<!--			数据库内容测试-->
+<!--			<button type="button" class="" onclick= "window.location.href ='{% url 'content' %}'">Content</button>-->
+			<button type="button" class="buttonLeft" onclick= "window.location.href ='{% url 'bases-home' %}'">Back</button>
+			<button type="Submit" class="buttonRight">Submit</button>
+		</div>
+	</form>
+
+</div>
+{% endblock %}
