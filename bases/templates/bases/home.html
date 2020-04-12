@@ -19,10 +19,13 @@
 	    {% endfor %}
 	{% endif %}
 
-	{% if user.is_authenticated %}
+	{% if user.is_superuser %}
+		<button class="fontBtn" onclick= "window.location.href ='{% url 'admin:index'%}'" >Administration</button>
+		<button class="fontBtn" onclick="window.location.href ='{% url 'analysis-category' %}'">Category</button>
+	{% elif user.is_authenticated %}
 		<button class="fontBtn" onclick= "window.location.href ='{% url 'bases-training'%}'" >Training</button>
 		<button class="fontBtn" onclick="window.location.href ='{% url 'analysis-category' %}'">Category</button>
-  	{% else %}
+	{% else %}
 		<button class="fontBtn" onclick= "window.location.href ='{% url 'bases-training'%}'" >Training</button>
 		<button class="fontBtn" onclick="window.location.href ='{% url 'accounts-login' %}'">Login</button>
 	{% endif %}

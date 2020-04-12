@@ -31,18 +31,18 @@
 .right2{
     position: absolute;
     right: 10px;
-    top: 20%;
+    top: 23.0%;
 
 }
 .right3{
     position: absolute;
     right: 10px;
-    top: 40%;
+    top: 41%;
 }
 .right4{
     position: absolute;
     right: 10px;
-    top: 55%;
+    top: 57%;
 }
 .right5{
     position: absolute;
@@ -64,19 +64,19 @@
 .left2{
     position: absolute;
     left: 20px;
-    top: 20%;
+    top: 23.0%;
 }
 
 .left3{
     position: absolute;
     left: 20px;
-    top: 40%;
+    top: 41%;
 
 }
 .left4{
     position: absolute;
     left: 20px;
-    top: 55%;
+    top: 57%;
 }
 .left5{
     position: absolute;
@@ -135,8 +135,13 @@
 .option_heading{
     width: 365px;
     background: #DCE2BE;
-
     height: 57.6px;
+}
+
+.option_heading_extended{
+    width: 365px;
+    background: #DCE2BE;
+    height: auto;
 }
 
 #bottom_button{
@@ -187,11 +192,11 @@ padding: .4rem 1.1rem;
     border: 5px solid blue;
 }
 
-.Potential_insect_avoidance_behavior{
-}
 
 .live {
   overflow: hidden;
+  width: 600px;
+  position: relative;
 }
 .live > li {
   list-style: none;
@@ -238,6 +243,7 @@ padding: .4rem 1.1rem;
   border-radius: 5px;
   padding: 1.5em 8px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  list-style-type: none;
 }
 
 

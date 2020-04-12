@@ -3,7 +3,6 @@ from multiselectfield import MultiSelectField
 
 
 
-
 class Result(models.Model):
     File_Name = models.CharField(max_length=60, primary_key=True)
     Observer_Name = models.CharField(max_length=40)
@@ -55,18 +54,18 @@ class Result(models.Model):
                                        choices=Choices_Is_a_calf_visible,)
 
     Choices_Other_caribou_visible_excluding_own_calf = (
-        ('No', 'No'),
-        ('Yes', 'Yes'),
-        ('Yes_herd', 'Yes – herd'),
         ('Yes_one_to_a_few', 'Yes – one to a few individuals'),
+        ('Yes_herd', 'Yes – herd'),
+        ('Yes', 'Yes'),
+        ('No', 'No'),
     )
     Other_caribou_visible_excluding_own_calf=models.CharField(max_length=20,
                                                               choices=Choices_Other_caribou_visible_excluding_own_calf,)
 
     Choices_Does_the_cow_have_antlers = (
-        ('cant see', "Can't see/Not sure/Not relevant"),
-        ('No', 'No'),
         ('Yes', 'Yes'),
+        ('No', 'No'),
+        ('cant see', "Can't see/Not sure/Not relevant"),
     )
     Does_the_cow_have_antlers=models.CharField(max_length=20,
                                                choices=Choices_Does_the_cow_have_antlers,)
@@ -102,7 +101,7 @@ class Result(models.Model):
         ('Alpine_Tundra', 'Alpine Tundra'),
         ('Lichen/Moss/Herbaceous', 'Lichen/Moss/Herbaceous'),
         ('Shrubby', 'Shrubby'),
-        ('Forested–Deciduous', 'Forested – Deciduous'),
+        ('Forested-Deciduous', 'Forested – Deciduous'),
         ('Forested–Coniferous', 'Forested – Coniferous'),
         ('Unvegetated_Areas', 'Unvegetated Areas'),
     )

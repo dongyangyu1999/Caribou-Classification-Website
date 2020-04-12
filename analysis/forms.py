@@ -25,11 +25,33 @@ class ResultForm(ModelForm):    # Inherit ModelForm class
         self.fields['What_is_the_PREDOMINANT_vegetation'].required = False
         self.fields['Habitat_features_visible'].required = False
 
+
         instance = getattr(self, 'instance', None)
         if instance and instance.pk:
             self.fields['File_Name'].widget.attrs['readonly'] = True
-            self.fields['Observer_Name'].widget.attrs['readonly'] = True
-            # self.fields['Observer_Name'].disabled = True
+            self.fields['Observer_Name'].widget.attrs['readonly'] = True  # text input
+
+    def clean_File_Name(self):
+        instance = getattr(self, 'instance', None)
+        if instance and instance.pk:
+            return instance.File_Name
+        else:
+            return self.clean_data['File_Name']
+
+    # def clean_Observer_Name(self):
+    #     instance = getattr(self, 'instance', None)
+    #     if instance and instance.pk:
+    #         return instance.Observer_Name
+    #     else:
+    #         return self.clean_data['Observer_Name']
+
+    # def clean_Video_Quality(self):
+    #     instance = getattr(self, 'instance', None)
+    #     if instance and instance.pk:
+    #         return instance.Video_Quality
+    #     else:
+    #         return self.clean_data['Observer_Name']
+
 
 
 

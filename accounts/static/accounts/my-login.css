@@ -80,5 +80,14 @@ body.my-login-page {
 
 .card-wrapper-profile{
     width: 800px;
+}
 
+.btn-green{
+    color: #fff;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.container {
+    text-shadow: white 0.3px 0.3px 0;
 }

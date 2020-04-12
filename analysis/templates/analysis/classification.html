@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="{% static 'bases/normalize.css' %}">
   <link rel="stylesheet" href="{% static 'bases/layout.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'analysis/hb.css' %}">
+
 {% endblock %}
 
 {% block content %}
@@ -26,18 +27,22 @@
 		</div>
         <p class="errorTips">If you have any questions about those prefilled data, please click the link after fields to send an email</p >
 
-    <form method="POST">
+    <form method="POST" onsubmit="this.querySelectorAll('select, input').forEach(i => i.disabled = false)">
         {% csrf_token %}
         <fieldset class="form-group">
-
-<!--        {{ form|crispy }}-->
+<!--            {{ form |crispy}}-->
             {% for field in form %}
                 {% if field.label == "Potential insect avoidance behavior" %}
-                    <div class="Potential_insect_avoidance_behavior">
+                    <div class="formLabel">
                         {{ field.label_tag }}
                     </div>
                     <div class="live">
                     {{ field }}
+                    {% if field.field.disabled %}
+                        <a href="" class="Xtooltip errorLink">Questions?
+                        <span class="Xtooltiptext">If you have any questions about those prefilled data, please click here to send an email</span>
+                        </a>
+                    {% endif %}
                     </div>
                 {% else %}
                     <div class="formLabel">
@@ -45,9 +50,11 @@
                     </div>
                     <div class="formField">
                         {{ field }}
-                        <a href="" class="Xtooltip errorLink">Questions?
-                        <span class="Xtooltiptext">If you have any questions about those prefilled data, please click here to send an email</span>
-                        </a>
+                        {% if field.field.disabled or field.readonly  %}
+                            <a href="" class="Xtooltip errorLink">Questions?
+                            <span class="Xtooltiptext">If you have any questions about those prefilled data, please click here to send an email</span>
+                            </a>
+                        {% endif %}
                     </div>
                 {% endif %}
 

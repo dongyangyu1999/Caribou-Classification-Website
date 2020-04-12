@@ -16,7 +16,8 @@ def login_view(request):
         user = authenticate(username=username, password=password)
         if user is not None and user.is_active:
             login(request, user)
-            return render(request, 'analysis/category.html')
+            # return render(request, 'analysis/category.html')
+            return redirect('analysis-category')
         else:
             messages.error(request, f'Invalid login or password!')
     # else:
