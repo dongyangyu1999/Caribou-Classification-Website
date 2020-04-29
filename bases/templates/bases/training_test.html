@@ -20,85 +20,86 @@
     </div>
 	
     <div id="form_content">
-      <form action="">
-		
+      <form action="result" method="POST">
+		{% csrf_token %}
         <div class="option_layout">
         <label>Video Quality</label><br>
-        <select name="videoQuality"> //'name' is used to reference the form-data after submission
-          <option value="" style="display:none">--------</option>
-          <option value="excellent">Excellent</option>
-          <option value="fair to good">Fair to good</option>
-          <option value="poor">Poor</option>
-          <option value="extremely Obstructed">Extremely Obstructed</option>
+        <select name="videoQuality" required> //'name' is used to reference the form-data after submission
+          <option name="videoQuality" value="" style="display:none">--------</option>
+          <option name="videoQuality" value="Excellent">Excellent</option>
+          <option name="videoQuality" value="Fair to good">Fair to good</option>
+          <option name="videoQuality" value="Poor">Poor</option>
+          <option name="videoQuality" value="Extremely Obstructed">Extremely Obstructed</option>
         </select>
         </div>
 
         <div class="option_layout">
         <label>Ruminating/Foraging</label><br>
-        <select name="ruminatingOrForaging">
-          <option value="" style="display:none">--------</option>
-          <option value="ruminating">RUMINATING</option>
-          <option value="chewing">CHEWING</option>
-          <option value="eating">EATING</option>
-          <option value="drinking">DRINKING</option>
-          <option value="licking">LICKING soil for minerals but did not eat</option>
-          <option value="none">None of the above</option>
+        <select name="ruminatingOrForaging" required>
+          <option name="ruminatingOrForaging" value="" style="display:none">--------</option>
+          <option name="ruminatingOrForaging" value="RUMINATING">RUMINATING</option>
+          <option name="ruminatingOrForaging" value="CHEWING">CHEWING</option>
+          <option name="ruminatingOrForaging" value="EATING">EATING</option>
+          <option name="ruminatingOrForaging" value="DRINKING">DRINKING</option>
+          <option name="ruminatingOrForaging" value="LICKING soil for minerals but did not eat">LICKING soil for minerals but did not eat</option>
+          <option name="ruminatingOrForaging" value="None of the above">None of the above</option>
         </select>
         </div>
 
 
         <div class="option_layout">
         <label>Behavior</label><br>
-        <select name="behavior">
-          <option value="" style="display:none">--------</option>
-          <option value="wadingOrSwimming">Wading/Swimming</option>
-          <option value="running">Running</option>
-          <option value="walking">Walking</option>
-          <option value="stationaryAwake">Stationary Awake</option>
-          <option value="napping">Napping</option>
+        <select name="behavior" required>
+          <option name="behavior" value="" style="display:none">--------</option>
+          <option name="behavior" value="Wading/Swimming">Wading/Swimming</option>
+          <option name="behavior" value="Running">Running</option>
+          <option name="behavior" value="Walking">Walking</option>
+          <option name="behavior" value="Stationary Awake">Stationary Awake</option>
+          <option name="behavior" value="Napping">Napping</option>
         </select>
         </div>
         
         <div class="option_layout">
         <label>What part of the habitat is visible</label><br>
-        <select name="habitat">
-          <option value="" style="display:none">--------</option>
-          <option value="groundAndImmediateSurroundings">Ground and immediate surroundings</option>
-          <option value="onlyGround">Only ground</option>
-          <option value="none">None</option>
+        <select name="habitat" required>
+          <option name="habitat" value="" style="display:none">--------</option>
+          <option name="habitat" value="Ground and immediate surroundings">Ground and immediate surroundings</option>
+          <option name="habitat" value="Only ground">Only ground</option>
+          <option name="habitat" value="None">None</option>
         </select>
         </div>
 
         <div class="option_layout">
         <label>Potential insect avoidance behavior</label><br>
-        <select name="insectAvoidanceBehavior">
-          <option value="" style="display:none">--------</option>
-          <option value="shook">Shook its head</option>
-          <option value="keepStill">Kept its nose still AND on the ground</option>
-          <option value="scratched">Scratched</option>
-          <option value="soughtSnowPatch">Sought snow patch</option>
-          <option value="hunddled">Huddled</option>
-          <option value="none">None of the above</option>
+        <select name="insectAvoidanceBehavior" required>
+          <option name="insectAvoidanceBehavior" value="" style="display:none">--------</option>
+          <option name="insectAvoidanceBehavior" value="Shook its head">Shook its head</option>
+          <option name="insectAvoidanceBehavior" value="Kept its nose still AND on the ground">Kept its nose still AND on the ground</option>
+          <option name="insectAvoidanceBehavior" value="Scratched">Scratched</option>
+          <option name="insectAvoidanceBehavior" value="Sought snow patch">Sought snow patch</option>
+          <option name="insectAvoidanceBehavior" value="Huddled">Huddled</option>
+          <option name="insectAvoidanceBehavior" value="None of the above">None of the above</option>
         </select>
         </div>
 
         <div id="confirmationField">
           <input type="button" value="Back" onclick="jump()">
           <input type="reset" value="Reset">
-          <input type="button" value="Submit" onclick="popUp()">
+          <input type="submit" value="Submit" >
+<!--          <input type="submit" value="Submit" onclick="popUp()">-->
 
-          <script type="text/javascript" >
-            function popUp()
-            {
-                alert("Thank you for your feedback! The score of your analysis is 100.");
-              window.location.href="{% url 'accounts-register' %}";
-            }
+<!--          <script type="text/javascript" >-->
+<!--            function popUp()-->
+<!--            {-->
+<!--                alert("Thank you for your feedback! The score of your analysis is 100.");-->
+<!--              window.location.href="{% url 'accounts-register' %}";-->
+<!--            }-->
 
-            function jump()
-            {
-              window.location.href="{% url 'bases-home' %}";
-            }
-          </script>
+<!--            function jump()-->
+<!--            {-->
+<!--              window.location.href="{% url 'bases-home' %}";-->
+<!--            }-->
+<!--          </script>-->
         </div>
 
       </form>

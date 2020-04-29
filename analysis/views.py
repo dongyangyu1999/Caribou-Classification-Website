@@ -27,7 +27,6 @@ def classification(request):
     return render(request, 'analysis/classification.html')
 
 
-
 @login_required
 def category(request):
     global videoID
@@ -52,24 +51,6 @@ def category(request):
 
         if Ruminating_Foraging:
             return queryField(request, db, targetDb, Ruminating_Foraging, 'Ruminating_Foraging')
-            # for filedElement in Ruminating_Foraging:
-            #     targetData=db.filter(Ruminating_Foraging=filedElement)
-            #     if targetData:
-            #         targetDb.extend(targetData)
-            # # get those videos id
-            # videoList = []
-            # for key in targetDb:
-            #     videoList.append(key.pk)
-            # if videoList:
-            #     videoID = choice(videoList)
-            #     videoPath = "/videos/" + videoID + ".mp4"
-            #     return render(request, 'analysis/targetVideo.html', {'videoPath': videoPath, 'videoID': videoID})
-            # else:
-            #     messages.success(request, f'No videos satisfied your preference so far, sorry, please try others.')
-            #     return redirect('analysis-category')
-
-            # # example for demo
-            # # return render(request, 'analysis/demo-content.html', {"list": targetDb})
 
         if State_of_Locomotion:
             return queryField(request, db, targetDb, State_of_Locomotion, 'State_of_Locomotion')
@@ -80,7 +61,6 @@ def category(request):
         if Does_the_cow_have_antlers:
             return queryField(request, db, targetDb, Does_the_cow_have_antlers, 'Does_the_cow_have_antlers')
 
-        # todo
         # Special case: multiChoice
         if Potential_insect_avoidance_behavior:
             return queryField(request, db, targetDb, Potential_insect_avoidance_behavior, 'Potential_insect_avoidance_behavior')
@@ -102,7 +82,7 @@ def targetVideo(request):
     videoPath = "/videos/" + videoID + ".mp4"
     return render(request, 'analysis/targetVideo.html', {'videoPath': videoPath, 'videoID': videoID})
 
-# 当前使用的
+# current use
 @login_required
 def ResultPrefilled(request, video_id):
     searchQuery = Result.objects.filter(File_Name=video_id)

@@ -36,3 +36,14 @@ def training_otherSpeciesDetectedTutorial(request):
 def training_test(request):
     return render(request, 'bases/training_test.html')
 
+def training_test_result(request):
+    quality = request.POST['videoQuality']
+    ruminatingOrForaging = request.POST['ruminatingOrForaging']
+    behavior = request.POST['behavior']
+    habitat = request.POST['habitat']
+    insectAvoidanceBehavior = request.POST['insectAvoidanceBehavior']
+
+    context={'videoQuality': quality, 'ruminatingOrForaging': ruminatingOrForaging,
+             'behavior': behavior, 'habitat': habitat, 'insectAvoidanceBehavior': insectAvoidanceBehavior}
+    return render(request, 'bases/training_test_result.html', context)
+

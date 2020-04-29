@@ -26,7 +26,11 @@
       <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'analysis-category' %}">Category<span class="sr-only">(current)</span></a>
+            {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'analysis-category' %}">Category<span class="sr-only">(current)</span></a>
+            {% else %}
+                <a class="nav-link" href="{% url 'bases-training' %}">Tutorial<span class="sr-only">(current)</span></a>
+            {% endif %}
           </li>
 <!--          <li class="nav-item">-->
 <!--            <a class="nav-link" href="#">Link</a>-->
@@ -47,7 +51,7 @@
                 <a class="nav-item nav-link active" href="{% url 'accounts-logout' %}">Logout</a>
             {% else %}
                 <a class="nav-item nav-link active" href="{% url 'accounts-login' %}">Login</a>
-                <a class="nav-item nav-link active" href="{% url 'bases-training' %}">Register</a>
+<!--                <a class="nav-item nav-link active" href="{% url 'bases-training' %}">Register</a>-->
             {% endif %}
 
             </div>
