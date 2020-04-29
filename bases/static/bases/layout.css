@@ -25,7 +25,11 @@ footer{
 .option_layout{
 	margin: 10px auto;
 	width: 50%;
+}
 
+.option_layout_result{
+	margin: 10px auto;
+	width: 70%;
 }
 
 #form_content{
@@ -67,6 +71,17 @@ footer{
 	color: #351C75;
 }
 
+.training_result-input{
+    width: 300px;
+    height: 25px;
+}
+.correct_answer{
+    background: green;
+}
+.wrong_answer{
+    background: red;
+}
 
-
-
+.result_tips{
+    background: #FFEC8B;
+}

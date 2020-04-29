@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="793af5eb-f040-4443-94db-d4a7d017353e" name="Default Changelist" comment="" />
+    <list default="true" id="793af5eb-f040-4443-94db-d4a7d017353e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bases/templates/bases/training_test_result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/static/img/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bases/static/bases/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/bases/static/bases/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bases/templates/bases/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bases/templates/bases/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bases/templates/bases/training.html" beforeDir="false" afterPath="$PROJECT_DIR$/bases/templates/bases/training.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bases/templates/bases/training_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/bases/templates/bases/training_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bases/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bases/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bases/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bases/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +28,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Yo8nKpyjB9Ko5H3xDx0fgNqHRI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,7 +40,8 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bases/static/img" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
@@ -67,17 +84,17 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="568" y="42" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1583876243263" />
-    <state x="600" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1586462022068">
+    <state x="600" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1588111647452">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="600" y="216" key="com.intellij.ide.util.TipDialog/0.0.1549.831@0.0.1549.831" timestamp="1586462022068" />
+    <state x="600" y="216" key="com.intellij.ide.util.TipDialog/0.0.1549.831@0.0.1549.831" timestamp="1588111647452" />
     <state x="794" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586282477790">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="794" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1549.831@0.0.1549.831" timestamp="1586282477790" />
-    <state x="490" y="152" width="672" height="678" key="search.everywhere.popup" timestamp="1584986970002">
+    <state x="490" y="152" width="672" height="678" key="search.everywhere.popup" timestamp="1588119953323">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="490" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1549.831@0.0.1549.831" timestamp="1584986970002" />
+    <state x="490" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1549.831@0.0.1549.831" timestamp="1588119953323" />
   </component>
 </project>

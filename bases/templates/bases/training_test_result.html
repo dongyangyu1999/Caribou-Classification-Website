@@ -1,0 +1,97 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+
+{% block head %}
+
+  <title>Video Analysis </title>
+
+  <link rel="stylesheet" href="{% static 'bases/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'bases/layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'analysis/hb.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="tbody-bkg">
+    <div id="classification-content">
+      <h1>Caribou Video Analysis Result</h1>
+      <video  width="700"  src="{% static 'videos/1179_20180824_151017.mp4' %}" controls></video>
+    </div>
+	
+    <div id="form_content">
+        <div class="option_layout">
+        <label>Video Quality</label><br>
+            <input class="training_result-input" value="{{videoQuality}}" readonly/>
+            {% if videoQuality == "Excellent"%}
+                <nobr class="correct_answer">Correct</nobr>
+            {% else %}
+            <nobr class="wrong_answer">Wrong</nobr>
+            <nobr class="result_tips"> Answer is <b>Excellent</b></nobr>
+            {% endif %}
+        </div>
+
+        <div class="option_layout">
+        <label>Ruminating/Foraging</label><br>
+            <input class="training_result-input" value="{{ruminatingOrForaging}}" readonly/>
+            {% if ruminatingOrForaging == "EATING"%}
+                <nobr class="correct_answer">Correct</nobr>
+            {% else %}
+            <nobr class="wrong_answer">Wrong</nobr>
+            <nobr class="result_tips">Answer is <b>EATING</b></nobr>
+            {% endif %}
+
+        </div>
+
+
+        <div class="option_layout">
+        <label>Behavior</label><br>
+            <input class="training_result-input" value="{{behavior}}" readonly/>
+            {% if behavior == "Walking"%}
+                <nobr class="correct_answer">Correct</nobr>
+            {% else %}
+            <nobr class="wrong_answer">Wrong</nobr>
+            <nobr class="result_tips">Answer is <b>Walking</b></nobr>
+            {% endif %}
+
+        </div>
+        
+        <div class="option_layout">
+        <label>What part of the habitat is visible</label><br>
+            <input class="training_result-input" value="{{habitat}}" readonly/>
+            {% if habitat == "Only ground"%}
+                <nobr class="correct_answer">Correct</nobr>
+            {% else %}
+            <nobr class="wrong_answer">Wrong</nobr>
+            <nobr class="result_tips">Answer is <b>Only ground</b></nobr>
+            {% endif %}
+        </div>
+
+        <div class="option_layout">
+        <label>Potential insect avoidance behavior</label><br>
+            <input class="training_result-input" value="{{insectAvoidanceBehavior}}" readonly/>
+            {% if insectAvoidanceBehavior == "None of the above"%}
+                <nobr class="correct_answer">Correct</nobr>
+            {% else %}
+            <nobr class="wrong_answer">Wrong</nobr>
+            <nobr class="result_tips">Answer is <b>None of the above</b></nobr>
+            {% endif %}
+        </div>
+
+        <div class="box">
+	        <button class="buttonLeft" onclick= "window.location.href ='{% url 'bases-training' %}'">Back to Tutorial</button>
+	        <button class="buttonRight" onclick= "window.location.href ='{% url 'accounts-register' %}'">Go to Register</button>
+        </div>
+
+
+    </div>
+  </div>
+
+    <footer>copyright @Caribou Cams</footer>
+
+
+
+
+  </div>
+
+{% endblock %}
